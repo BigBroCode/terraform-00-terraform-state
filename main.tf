@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "rg_foobar" {
-  name     = "rg-foobar"
-  location = "eastus"
+  name     = "rg-${var.application_name}-${var.environment_name}"
+  location = var.primary_region
 }

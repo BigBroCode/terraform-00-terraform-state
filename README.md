@@ -1,4 +1,5 @@
-# Setting `hashicorp/azurerm`
+# Terraform + Azure
+## Setting `hashicorp/azurerm`
 
 This is how to define a provide named `azurerm` using `hashicorp/azurerm`
 **solution 1**
@@ -49,3 +50,14 @@ provider "azurerm" {
   # no more subscription_id to define here.
 }
 ```
+## Terraform workspace
+
+```sh
+# listing the terraform workspaces
+terraform workspace list
+
+# creating a new terraform workspace
+terraform workspace new dev
+```
+
+**PS:** Whenever a new workspace is create, the command `terraform init` is needed.

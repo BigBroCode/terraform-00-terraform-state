@@ -2,6 +2,7 @@
 
 This is how to define a provide named `azurerm` using `hashicorp/azurerm`
 **solution 1**
+
 ```hcl
 terraform {
   required_providers {
@@ -18,15 +19,18 @@ provider "azurerm" {
   subscription_id = "ad97ff06-f72c-496f-a08a-b07f4869a9ba"
 }
 ```
+
 **solution 2**
 We could also define as follows using environment variable.
 
 ```ps
 $env:ARM_SUBSCRIPTION_ID="ad97ff06-f72c-496f-a08a-b07f4869a9ba"
 ```
+
 ```sh
 export ARM_SUBSCRIPTION_ID="ad97ff06-f72c-496f-a08a-b07f4869a9ba"
 ```
+
 and consequently, the `azurerm` provider will defined as follows:
 
 ```hcl

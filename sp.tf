@@ -13,10 +13,10 @@ resource "azurerm_role_assignment" "sp_reader_subscription" {
   scope                = "/subscriptions/${var.subscription_id}"
 }
 
-resource "azurerm_role_assignment" "sp_storage_blob_contributor" {
+resource "azurerm_role_assignment" "sp_plan_storage_account_contributor" {
   principal_id         = azuread_service_principal.sp_azure_infra_plan.object_id
   principal_type       = "ServicePrincipal"
-  role_definition_name = "Storage Blob Data Contributor"
+  role_definition_name = "Storage Account Contributor"
   scope                = "/subscriptions/${var.subscription_id}/resourceGroups/${azurerm_resource_group.main.name}/providers/Microsoft.Storage/storageAccounts/${azurerm_storage_account.main.name}"
 }
 

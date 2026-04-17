@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "~> 4.57.0"
     }
+    azuread = {
+      source  = "hashicorp/azuread"
+      version = "~> 3.8"
+    }
     random = {
       source  = "hashicorp/random"
       version = "~> 3.8"
@@ -14,5 +18,8 @@ terraform {
 provider "azurerm" {
   resource_provider_registrations = "none" # This is only required when the User, Service Principal, or Identity running Terraform lacks the permissions to register Azure Resource Providers.
   features {}
-  #   subscription_id = "ad97ff06-f72c-496f-a08a-b07f4869a9ba"
+  subscription_id = var.subscription_id
 }
+
+provider "azuread" {}
+

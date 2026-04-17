@@ -1,2 +1,7 @@
 application_name = "terrform-state"
 primary_region   = "eastus"
+subscription_id  = "ad97ff06-f72c-496f-a08a-b07f4869a9ba"
+tenant_id        = "a95a14c9-e700-4ad4-a021-5bde0ed70d8d"
+github_issuer    = "https://token.actions.githubusercontent.com"
+github_repo      = "repo:BigBroCode/terraform-01-azure-infra"
+github_audience  = "api://AzureADTokenExchange"
